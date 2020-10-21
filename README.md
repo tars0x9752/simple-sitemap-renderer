@@ -1,15 +1,68 @@
-# npm-typescript-package-starter
+# simple-sitemap-renderer
 
-A personal TypeScript package starter boilerplate.
+A bare minimum sitemap renderer written in TypeScript.
 
-## Includes
+## Features
 
-- Prettier
-- ESLint
-- Jest
+- Render Sitemap XML
+- Zero-dependencies
+- Written in TypeScript
 
-## What to do first
+## 💻 Installation
 
-Install the devDependencies with the command `npm i` or `yarn install`. 
+```sh
+$ npm i simple-sitemap-renderer
+```
 
-And, Don't forget to enter the `name`, `description` and `repository.url` into package.json. Once you've done that, you can start writing code. 👍
+or
+
+```sh
+yarn add simple-sitemap-renderer
+```
+
+## 🎈 Usage
+
+```ts
+import { renderSitemap } from 'simple-sitemap-renderer'
+
+renderSitemap([
+  {
+    url: 'https://your-site/your-page-1',
+    lastmod: '2020-10-10',
+    changefreq: 'always',
+    priority: 0.8,
+  },
+  {
+    url: 'https://your-site/your-page-2',
+    lastmod: '2020-10-10',
+  },
+  {
+    url: 'https://your-site/your-page-3',
+  },
+])
+```
+
+## API
+
+### renderSitemap(entries: Entry[], options?: RenderOptiopns)
+
+#### Entry
+
+```ts
+type Entry = {
+  url: string
+  lastmod?: string // yyyy-mm-dd
+  changefreq?: ChangeFreq // always|hourly|daily|weekly|monthly|yearly|never
+  priority?: number // 0.0 ~ 1.0
+}
+```
+
+#### RenderOptiopns
+
+```ts
+type RenderOptiopns = {
+  encodeUrl?: boolean
+}
+```
+
+- `encodeUrl`: If you want this libary to encode a url for you, set it to true. (Otherwise, you don't need this option.)
