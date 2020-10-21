@@ -8,6 +8,7 @@
     "lib/**/*"
   ],
   "scripts": {
+    "dev": "tsc -w",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint . --ext .ts,.tsx",

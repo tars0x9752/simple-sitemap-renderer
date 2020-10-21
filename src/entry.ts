@@ -21,8 +21,8 @@ export type RenderOptions = {
   encodeUrl?: boolean
 }
 
-const renderUrl = (url: string, options?: RenderOptions) => {
-  return tag.url(options?.encodeUrl ? encodeURI(url) : url)
+const renderLoc = (url: string, options?: RenderOptions) => {
+  return tag.loc(options?.encodeUrl ? encodeURI(url) : url)
 }
 
 const renderLastmod = (lastmod: string | undefined) => {
@@ -42,7 +42,7 @@ const renderChangefreq = (changefreq: ChangeFreq | undefined) => {
 }
 
 export const stringifyPriority = (priority: number): string => {
-  return `${Math.floor(priority * 10)}`.split('').join('.')
+  return `0${Math.floor(priority * 10)}`.split('').join('.').slice(-3)
 }
 
 const renderPriority = (priority: number | undefined) => {
@@ -59,10 +59,12 @@ export const renderEntry = (
   { url, lastmod, changefreq, priority }: Entry,
   options?: RenderOptions
 ): string => {
-  return [
-    renderUrl(url, options),
+  const urlChildren = [
+    renderLoc(url, options),
     renderLastmod(lastmod),
     renderChangefreq(changefreq),
     renderPriority(priority),
   ].join('')
+
+  return tag.url(urlChildren)
 }
