@@ -1,5 +1,5 @@
 import { renderSitemap } from '../index'
-import { Entry, RenderOptions } from '../entry'
+import { Entry } from '../entry'
 
 describe('renderSitemap', () => {
   describe('single urlset', () => {
