@@ -4,7 +4,7 @@ A bare minimum sitemap renderer written in TypeScript.
 
 ## Features
 
-- Render Sitemap XML
+- Render standard sitemap XML
 - Zero-dependencies
 - Written in TypeScript
 
@@ -42,9 +42,34 @@ renderSitemap([
 ])
 ```
 
+### Rendered Result
+
+> the sample here is formatted for readability, but actual result will always be minified.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset>
+  <url>
+    <loc>https://your-site/your-page-1</loc>
+    <lastmod>2020-10-10</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://your-site/your-page-2</loc>
+    <lastmod>2020-10-10</lastmod>
+  </url>
+  <url>
+    <loc>https://your-site/your-page-3</loc>
+  </url>
+</urlset>
+```
+
 ## API
 
 ### renderSitemap(entries: Entry[], options?: RenderOptiopns)
+
+returns sitemap xml string.
 
 #### Entry
 
@@ -65,4 +90,4 @@ type RenderOptiopns = {
 }
 ```
 
-- `encodeUrl`: If you want this libary to encode a url for you, set it to true. (Otherwise, you don't need this option.)
+- `encodeUrl`: If you want this libary to encode urls for you, set it to true. (Otherwise, you don't need this option.)
