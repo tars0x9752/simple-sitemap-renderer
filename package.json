@@ -1,7 +1,7 @@
 {
-  "name": "package-name",
+  "name": "simple-sitemap-renderer",
   "version": "1.0.0",
-  "description": "description",
+  "description": "A bare minimum sitemap renderer",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -34,8 +34,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "repository url goes here"
+    "url": "https://github.com/tars0x9752/sitemap-renderer.git"
   },
   "author": "tars0x9752",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "sitemap",
+    "sitemap.xml",
+    "sitemap renderer"
+  ]
 }
