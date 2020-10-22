@@ -6,7 +6,7 @@ describe('renderSitemap', () => {
     it('only url', () => {
       const entries: Entry[] = [
         {
-          url: 'https://github.com/tars0x9752/sitemap-renderer',
+          url: 'https://github.com/tars0x9752/simple-sitemap-renderer',
         },
       ]
 
@@ -14,7 +14,7 @@ describe('renderSitemap', () => {
         '<?xml version="1.0" encoding="UTF-8"?>' +
         '<urlset>' +
         '<url>' +
-        '<loc>https://github.com/tars0x9752/sitemap-renderer</loc>' +
+        '<loc>https://github.com/tars0x9752/simple-sitemap-renderer</loc>' +
         '</url>' +
         '</urlset>'
 
@@ -24,7 +24,7 @@ describe('renderSitemap', () => {
     it('full entry', () => {
       const entries: Entry[] = [
         {
-          url: 'https://github.com/tars0x9752/sitemap-renderer',
+          url: 'https://github.com/tars0x9752/simple-sitemap-renderer',
           lastmod: '2020-10-10',
           changefreq: 'always',
           priority: 0.5,
@@ -35,7 +35,7 @@ describe('renderSitemap', () => {
         '<?xml version="1.0" encoding="UTF-8"?>' +
         '<urlset>' +
         '<url>' +
-        '<loc>https://github.com/tars0x9752/sitemap-renderer</loc>' +
+        '<loc>https://github.com/tars0x9752/simple-sitemap-renderer</loc>' +
         '<lastmod>2020-10-10</lastmod>' +
         '<changefreq>always</changefreq>' +
         '<priority>0.5</priority>' +
