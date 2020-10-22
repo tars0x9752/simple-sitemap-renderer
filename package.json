@@ -1,6 +1,6 @@
 {
   "name": "simple-sitemap-renderer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A bare minimum sitemap renderer",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
