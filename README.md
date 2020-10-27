@@ -17,7 +17,7 @@ $ npm i simple-sitemap-renderer
 or
 
 ```sh
-yarn add simple-sitemap-renderer
+$ yarn add simple-sitemap-renderer
 ```
 
 ## 🎈 Usage
