@@ -19,6 +19,14 @@ export const close = (tagName: TagName): string => {
 }
 
 export const buildTagRenderer = (tagName: TagName): TagRenderer => {
+  if (tagName === 'urlset') {
+    return (value: string) => {
+      return `<${tagName} xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${value}${close(
+        tagName
+      )}`
+    }
+  }
+
   return (value: string) => {
     return `${open(tagName)}${value}${close(tagName)}`
   }

@@ -12,7 +12,7 @@ describe('renderSitemap', () => {
 
       const renderedXML =
         '<?xml version="1.0" encoding="UTF-8"?>' +
-        '<urlset>' +
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' +
         '<url>' +
         '<loc>https://github.com/tars0x9752/simple-sitemap-renderer</loc>' +
         '</url>' +
@@ -33,7 +33,7 @@ describe('renderSitemap', () => {
 
       const renderedXML =
         '<?xml version="1.0" encoding="UTF-8"?>' +
-        '<urlset>' +
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' +
         '<url>' +
         '<loc>https://github.com/tars0x9752/simple-sitemap-renderer</loc>' +
         '<lastmod>2020-10-10</lastmod>' +
@@ -66,7 +66,7 @@ describe('renderSitemap', () => {
 
       const renderedXML =
         '<?xml version="1.0" encoding="UTF-8"?>' +
-        '<urlset>' +
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' +
         '<url>' +
         '<loc>https://your-site/your-page-1</loc>' +
         '<lastmod>2020-10-10</lastmod>' +
